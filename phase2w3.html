@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="wildcard.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <script type = "text/javascript" >  
+        function preventBack() { window.history.forward(); }  
+        setTimeout("preventBack()", 0);  
+        window.onunload = function () { null };  
+    </script> 
+</head>
+<body>
+  
+    <div class="wildcard-screenscreen">
+        <div class="overlap-group3">
+            <div class="rectangle-19"></div>
+          <div class="phase-1-2022-30 raleway-semi-bold-black-20px" style="position: absolute; top: 30px;"">Phase 2: 2030-40</div>
+          <img class="line-10" src="line-10.svg" />
+          <h1 class="title">Wildcard</h1>
+          <div class="overlap-group">
+            <div class="congratulations-you raleway-normal-black-24px">
+              <span class="raleway-normal-black-24px"
+                id="w1"></span
+              ><br><br><span class="span1" id="w2"></span
+              ><span class="raleway-normal-black-24px"></span>
+            </div>
+            
+          </div>
+          <img class="frame" src="wildcard icon.png" />
+          
+          <div class="overlap-group21">
+            <div class="group-39">
+              <div class="group-38">
+                <div class="co2-456 raleway-semi-bold-black-32px" id="yes" value="yes" onclick="option1()"><a>Yes</a></div>
+              </div>
+              <div class="group-37">
+                <div class="coins-100 raleway-semi-bold-black-32px" id="no" value="no" onclick="option2()"><a>No</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="icons8-donate-ios-glyph-96-1"></div>
+      </div>
+      
+    
+</body>
+<script>
+ 
+var co2=parseInt(localStorage.getItem('co2'));
+var coin=parseInt(localStorage.getItem('coin'));
+var w1=localStorage.getItem('str');
+var w2=localStorage.getItem('str1');
+var fco2=parseInt(localStorage.getItem('mco2'));
+document.getElementById('w1').innerHTML = w1;
+document.getElementById('w2').innerHTML = w2;
+function option1() {
+    ncoin = coin - 5;
+    nco2 = Math.floor(co2);
+    localStorage.setItem('coin', ncoin);
+    localStorage.setItem('co2', nco2);
+    localStorage.setItem('Climeworks', true);
+    location.href = "information2.html";
+  };
+  function option2() {
+    ncoin = coin;
+    nco2 = Math.floor(co2);
+    localStorage.setItem('coin', ncoin);
+    localStorage.setItem('co2', nco2);
+    localStorage.setItem('Climeworks', false);
+    location.href = "information2.html";
+  };
+  </script>
+  
+</html>
